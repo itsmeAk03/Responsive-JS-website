@@ -11,3 +11,59 @@
     list-style: none;
     text-decoration: none;
 }
+:root{
+    --main-color:#bc9667;
+    --second-color:#edeae3;
+    --text-color:#1b1b1b;
+    --bg-color:#fff;
+
+    /* ye css property root doc pe hi laga diye
+    taaki pure webpage pe kahi bhi isi colour pallete
+    ko var() function call krke use krsakte easily  */
+
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+}
+header{
+    position: fixed;  
+    /* position fixed hai taaki scroll hone par bhi navbar/header dikhe */
+    width: 100%; 
+    /* width 100 rakho taki cover ho  */
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    /* jab scroll hoga to navbar +z-axis i.e upar dikhe window ke */
+    display: flex;
+    /* dhyaan dena ue header ke andar img aur navbar dono hai
+    to in dono blocks ko flex krega  */
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    transition: 0.5s linear;
+    background: var(--text-color);
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+    /* ye flex krega wo jo home about prods etc 
+    thha usko  */
+}
+.navbar a{
+    padding: 8px 17px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    /* controls the capitilization of the text */
+    font-weight: 500;
+}
+.navbar a:hover{
+    background: var(--main-color);
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+}
